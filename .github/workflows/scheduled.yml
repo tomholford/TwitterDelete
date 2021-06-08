@@ -8,6 +8,8 @@ on:
     - cron:  '0 0 * * *'
 jobs:
   delete:
+    env:
+      GITHUB_ENV: ${{ secrets.TWITTER_USER }}
     runs-on: ubuntu-latest
     steps:
     - name: Set up Git repository
